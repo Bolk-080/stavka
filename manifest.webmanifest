@@ -1,0 +1,23 @@
+{
+  "name": "Ставка — калькуляторы о деньгах",
+  "short_name": "Ставка",
+  "description": "17 финансовых калькуляторов: вклады, налоги, вычеты, ИИС-3, аренда vs ипотека, НПД и ИП, досрочка, сравнение, кредиты, зарплата.",
+  "lang": "ru",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "background_color": "#0A1712",
+  "theme_color": "#0A1712",
+  "categories": ["finance", "productivity", "utilities"],
+  "icons": [
+    { "src": "icon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any" },
+    { "src": "icon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "maskable" }
+  ],
+  "shortcuts": [
+    { "name": "Аренда vs ипотека", "url": "./index.html?calc=rent" },
+    { "name": "НПД, ИП, патент", "url": "./index.html?calc=regime" },
+    { "name": "Налоговые вычеты", "url": "./index.html?calc=deductions" },
+    { "name": "Досрочка", "url": "./index.html?calc=early" }
+  ]
+}
