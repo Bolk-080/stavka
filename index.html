@@ -3467,5 +3467,26 @@ try {
 </script>
 <noscript><div><img src="https://mc.yandex.ru/watch/114488562" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
 <!-- /Yandex.Metrika counter -->
+<!-- Отслеживание целей для Яндекс.Метрики -->
+<script>
+document.addEventListener('click', function(e) {
+    // Ищем ближайшую кнопку с атрибутом data-act
+    const btn = e.target.closest('[data-act]');
+    if (!btn) return;
+    
+    const action = btn.dataset.act;
+    
+    // Проверяем, загружена ли Метрика, и отправляем событие
+    if (typeof ym !== 'undefined') {
+        if (action === 'xlsx') {
+            ym(114488562, 'reachGoal', 'download_excel');
+        } else if (action === 'pdf' || action === 'img') {
+            ym(114488562, 'reachGoal', 'export_result');
+        } else if (action === 'save') {
+            ym(114488562, 'reachGoal', 'save_history');
+        }
+    }
+});
+</script>
 </body>
 </html>
