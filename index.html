@@ -1369,7 +1369,7 @@ var TOOLS = [
   fields: [
     chipsF('year', 'Год процентов', [[2023, '2023'], [2024, '2024'], [2025, '2025'], [2026, '2026']], 2025),
     money('interest', 'Проценты по всем вкладам за год', 26e4, 0, 2e6, 5e3, { max: 5e7 }),
-    pct('keyRate', 'Макс. ключевая ставка года', 21, 5, 25, 0.25, { adv: 1, min: 1, max: 35 }),
+    pct('keyRate', 'Макс. ключевая ставка года', 16, 5, 25, 0.25, { adv: 1, min: 1, max: 35 }),
     bool('high', '15% на всю базу', false, { adv: 1 })
   ],
   compute: function (p) {
@@ -1661,7 +1661,7 @@ var TOOLS = [
     int('years', 'Срок', 'лет', 20, 1, 30, { max: 30 }),
     sel('program', 'Программа', [['own', 'Своя ставка'], ['family', 'Семейная · 6%'], ['it', 'IT · 6%'], ['far', 'Дальневосточная · 2%']], 'own', { adv: 1 }),
     bool('matOn', 'Маткапитал', false, { adv: 1 }),
-    money('mat', 'Сумма маткапитала', 737205, 0, 15e5, 1e4, { adv: 1, max: 2e6, show: function (s) { return s.matOn; } }),
+    money('mat', 'Сумма маткапитала', 728922, 0, 15e5, 1e4, { adv: 1, max: 2e6, show: function (s) { return s.matOn; } }),
     money('extra', 'Досрочно каждый месяц', 0, 0, 5e4, 1e3, { adv: 1, max: 1e6 }),
     sel('strat', 'Стратегия досрочки', STRAT, 'term', { adv: 1, show: function (s) { return s.extra > 0; } })
   ],
