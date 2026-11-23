@@ -1248,7 +1248,7 @@ function depSim(sum, rate, term, add, cap, basis, start) {
 }
 function taxInt(interest, limit) {
   var b = Math.max(0, interest - limit);
-  return progTax(b);
+  return b <= 2.4e6 ? b * 0.13 : 2.4e6 * 0.13 + (b - 2.4e6) * 0.15;
 }
 function loanSim(sum, rate, n, type, extraM, once, strat, feeM) {
   var i = rate / 100 / 12;
