@@ -2248,7 +2248,7 @@ var TOOLS = [
   ],
   compute: function (p) {
     var M = Math.round(p.months), npd = p.mode === 'npd';
-    var dm = (p.kids >= 1 ? 1400 : 0) + (p.kids >= 2 ? 2800 : 0) + Math.max(0, p.kids - 2) * 6000;
+    var dm = (p.kids >= 1 ? 1400 : 0) + (p.kids >= 2 ? 2800 : 0) + Math.max(0, p.kids - 2) * 3000;
     var ct = 0, prevTax = 0, cg = 0, cb = 0, tax = 0, net = 0, ded = 0, con = 0, flat = 0, rows = [];
     for (var m = 1; m <= M; m++) {
       var eligible = !npd && (cg + p.gross) <= 45e4;
